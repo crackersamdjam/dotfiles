@@ -68,7 +68,10 @@
 
     "clock": {
         "interval": 60,
-        "format": "{:%e %b %Y %H:%M}",
+		// 24 hour clock
+        //"format": "{:%e %b %Y %H:%M}",
+		// 12 hour clock
+        "format": "{:%e %b %Y %I:%M%p}",
         "tooltip": true,
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
         "on-click": "swaymsg exec \\$calendar"
@@ -208,7 +211,9 @@
             "on": "󰌵",
             "off": "󰌶"
         },
-        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= /usr/share/sway/scripts/sunset.sh",
+		// Waterloo
+        "exec": "fallback_latitude=43.4 fallback_longitude=-80.5 latitude= longitude= /usr/share/sway/scripts/sunset.sh",
+
         "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
         "exec-if": "/usr/share/sway/scripts/sunset.sh check",
         "signal": 6
