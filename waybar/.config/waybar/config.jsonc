@@ -212,7 +212,7 @@
             "off": "󰌶"
         },
 		// Waterloo
-        "exec": "fallback_latitude=43.4 fallback_longitude=-80.5 latitude= longitude= /usr/share/sway/scripts/sunset.sh",
+        "exec": "fallback_latitude=43.4 fallback_longitude=-80.5 latitude= longitude= ~/.config/sway/definition.d/sunset.sh",
 
         "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
         "exec-if": "/usr/share/sway/scripts/sunset.sh check",
