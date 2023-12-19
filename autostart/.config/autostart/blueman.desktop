@@ -2,4 +2,3 @@
 Name=Blueman Applet
 Type=Application
 # overwrites /etc/xdg/autostart/blueman.desktop
-

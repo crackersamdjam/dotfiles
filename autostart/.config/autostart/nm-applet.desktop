@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=NetworkManager-miniprogram
+Type=Application
+# overwrites /etc/xdg/autostart/nm-applet.desktop
