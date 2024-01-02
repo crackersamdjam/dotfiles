@@ -33,6 +33,7 @@
         // connecting
         "network",
         "bluetooth",
+        "custom/valent",
 
         // media
         "custom/playerctl",
@@ -68,10 +69,8 @@
 
     "clock": {
         "interval": 60,
-		// 24 hour clock
+		"format": "{:%e %b %Y %I:%M%p}",
         //"format": "{:%e %b %Y %H:%M}",
-		// 12 hour clock
-        "format": "{:%e %b %Y %I:%M%p}",
         "tooltip": true,
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
         "on-click": "swaymsg exec \\$calendar"
@@ -125,7 +124,8 @@
         },
         "tooltip": true,
         "tooltip-format-activated": "power-saving disabled",
-        "tooltip-format-deactivated": "power-saving enabled"
+        "tooltip-format-deactivated": "power-saving enabled",
+        "timeout": 60
     },
 
     "backlight": {
@@ -168,6 +168,17 @@
         "spacing": 5
     },
 
+    "custom/pacman": {
+        "format": "󰀼 {}",
+        "interval": 3600,
+        "return-type": "json",
+        "exec-if": "/usr/share/sway/scripts/checkupdates.sh check",
+        "exec": "/usr/share/sway/scripts/checkupdates.sh status",
+        "on-click": "pamac-manager --updates; pkill -RTMIN+14 waybar",
+        "on-click-middle": "pkill -RTMIN+14 waybar",
+        "signal": 14
+    },
+
     "custom/menu": {
         "format": "",
         "on-click": "swaymsg exec \\$menu",
@@ -186,7 +197,7 @@
         "format": " {}",
         "min-length": 5,
         "tooltip": false,
-        "on-click": "swaymsg input $(swaymsg -t get_inputs --raw | jq '[.[] | select(.type == \"keyboard\")][0] | .identifier') xkb_switch_layout next"
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
     },
 
     "custom/scratchpad": {
@@ -213,7 +224,6 @@
         },
 		// Waterloo
         "exec": "fallback_latitude=43.4 fallback_longitude=-80.5 latitude= longitude= ~/.config/sway/definition.d/sunset.sh",
-
         "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
         "exec-if": "/usr/share/sway/scripts/sunset.sh check",
         "signal": 6
@@ -271,7 +281,6 @@
     },
 
     "custom/weather": {
-        "icon-size": 42,
         "format": "{icon} {}",
         "tooltip": true,
         "interval": 3600,
@@ -309,8 +318,8 @@
             "tracking": "󰖷",
             "stopped": "󰋣"
         },
-        "exec": "/bin/sh /usr/share/sway/scripts/zeit.sh status",
-        "on-click": "/bin/sh /usr/share/sway/scripts/zeit.sh click; pkill -RTMIN+10 waybar",
+        "exec": "/usr/share/sway/scripts/zeit.sh status",
+        "on-click": "/usr/share/sway/scripts/zeit.sh click; pkill -RTMIN+10 waybar",
         "exec-if": "[ -x \"$(command -v zeit)\" ]",
         "signal": 10
     },
@@ -323,9 +332,9 @@
             "default": "󰚢",
             "dnd": "󰚣"
         },
-        "on-click": "makoctl mode | grep 'do-not-disturb' && makoctl mode -r do-not-disturb || makoctl mode -a do-not-disturb; pkill -RTMIN+11 waybar",
-        "on-click-right": "makoctl restore",
-        "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1)",
+        "on-click": "/usr/share/sway/scripts/dnd.sh toggle; pkill -RTMIN+11 waybar",
+        "on-click-right": "/usr/share/sway/scripts/dnd.sh restore",
+        "exec": "/usr/share/sway/scripts/dnd.sh status",
         "signal": 11
     },
 
@@ -342,5 +351,24 @@
         "on-click": "/usr/share/sway/scripts/wluma.sh toggle; pkill -RTMIN+12 waybar",
         "exec-if": "/usr/share/sway/scripts/wluma.sh check",
         "signal": 12
+    },
+
+    "custom/valent": {
+        "format": "{icon}",
+        "tooltip": true,
+        "interval": 60,
+        "exec": "/usr/share/sway/scripts/valent.py",
+        "exec-if": "[ -x \"$(command -v valent)\" ]",
+        "return-type": "json",
+        "format-icons": {
+            "no-devices": "",
+            "dangerously-empty": "󰂃",
+            "no-signal": "󰞃",
+            "connected": "",
+            "disconnected": ""
+        },
+        "on-click": "valent",
+        "on-click-middle": "pkill -RTMIN+13 waybar",
+        "signal": 13
     }
 }
