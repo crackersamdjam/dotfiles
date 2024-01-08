@@ -1,0 +1,10 @@
+# see https://gist.github.com/michaelmrose/9595075b43f24aa903fa for examples
+
+set selection-clipboard clipboard
+set adjust-open "best-fit"
+
+set scroll-page-aware "true"
+map k scroll full-up
+map j scroll full-down
+map space scroll full-down
+
