@@ -344,8 +344,3 @@ let g:airline_theme='onedark'
 "set background=dark
 "colorscheme solarized
 
-" Vim-Easymotion highlight colours
-" source: https://stackoverflow.com/questions/6126871/easymotion-coloring-in-vim-with-solarized-theme
-"hi link EasyMotionTarget ErrorMsg
-"hi link EasyMotionShade  Comment
-
