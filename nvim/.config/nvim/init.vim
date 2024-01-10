@@ -70,7 +70,7 @@ Plug 'altercation/vim-colors-solarized'
 " https://jonasdevlieghere.com/vim-lsp-clangd/
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
-"Plug 'ajh17/vimcompletesme' "no longer exists?
+Plug 'vim-scripts/vimcompletesme' " get clangd suggestions instead of default vim text-based suggestions
 Plug 'preservim/nerdtree'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
