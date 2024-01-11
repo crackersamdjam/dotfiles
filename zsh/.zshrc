@@ -27,7 +27,7 @@ export VISUAL=nvim
 export EDITOR=nvim
 alias vim=nvim
 alias open=xdg-open
-export FZF_DEFAULT_COMMAND='fd --hidden .'
+export FZF_DEFAULT_COMMAND='fd --hidden --type f --color never'
 
 export PATH=$HOME/scripts:$PATH
 
