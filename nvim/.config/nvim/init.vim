@@ -38,6 +38,8 @@ set clipboard+=unnamedplus
 " https://github.com/Ninjaclasher/scripts-and-config/blob/master/dotfiles/nvim/.config/nvim/init.vim
 set background=light
 hi QuickFixLine guibg=Black
+"https://www.reddit.com/r/neovim/comments/17pkryg/disable_highlighting_of_unused_variables/
+highlight link DiagnosticUnnecessary NONE
 
 " run my printcolors cmd to see available colors
 set hlsearch
