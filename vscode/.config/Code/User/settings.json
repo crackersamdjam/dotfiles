@@ -1,0 +1,32 @@
+{
+    "workbench.startupEditor": "none",
+    "window.titleBarStyle": "custom",
+    "workbench.colorCustomizations": {
+        "statusBar.background" : "#1A1A1A",
+        "statusBar.noFolderBackground" : "#212121",
+        "statusBar.debuggingBackground": "#263238"
+    },
+    "latex-workshop.latex.autoBuild.interval": 200,
+    "extensions.ignoreRecommendations": true,
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.cursorStyle": "line",
+    "markdown-preview-enhanced.liveUpdate": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "vim.vimrc.enable": true,
+    "git.confirmSync": false,
+    "latex-workshop.latex.outDir": "%DIR%/aux",
+    "git.enableSmartCommit": true,
+    "git.openRepositoryInParentFolders": "never",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "redhat.telemetry.enabled": false,
+    "explorer.confirmDelete": false,
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindings": [
+        {"before": ["g", "r"], "commands": ["references-view.findReferences"]}
+    ]
+}
