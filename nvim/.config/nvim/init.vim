@@ -64,12 +64,8 @@ Plug 'lervag/vimtex', {'for': 'tex'}
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'altercation/vim-colors-solarized'
-" YCM https://github.com/ecnerwala/dotfiles/blob/master/vim/.config/nvim/init.vim
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clangd-completer' }
-
-" I'm now using vim-lsp instead of YCM
-" https://codeforces.com/blog/entry/67828?#comment-520439
 " https://jonasdevlieghere.com/vim-lsp-clangd/
+" tut: https://codeforces.com/blog/entry/67828?#comment-520439
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'vim-scripts/vimcompletesme' " get clangd suggestions instead of default vim text-based suggestions
@@ -324,15 +320,6 @@ let g:vimtex_compiler_latexmk = {'aux_dir': 'aux'}
 "      2 = always enable this syntax package
 let g:vimtex_view_method='zathura' "https://wikimatze.de/vimtex-the-perfect-tool-for-working-with-tex-and-vim/
 
-
-" === YCM (YouCompleteMe) ===
-" https://github.com/plasmatic1/competitive-programming-environment/blob/master/.vimrc#L107
-let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_global_extra_conf.py'
-let g:ycm_min_num_of_chars_for_completion = 0
-let g:ycm_min_num_identifier_candidate_chars = 1
-let g:ycm_max_num_candidates = 20
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_auto_trigger = 1
 
 " === Theme ===
 " https://github.com/vim-airline/vim-airline/wiki/Screenshots
