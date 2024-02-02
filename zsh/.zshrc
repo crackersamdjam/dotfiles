@@ -14,9 +14,29 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
 fi
 
 # ---------------
+source ~/.zshenv
+
+function 341(){
+	cd ~/School/3A/CS341
+}
+function 348(){
+	cd ~/School/3A/CS348
+}
+function 349(){
+	cd ~/School/3A/CS349
+}
+function 350(){
+	cd ~/School/3A/CS350
+}
+function 370(){
+	cd ~/School/3A/CS370
+}
+function 265(){
+	cd ~/School/3A/PHIL265
+}
 
 # https://thevaluable.dev/fzf-shell-integration/
-source /usr/share/fzf/key-bindings.zsh
+source ~/.key-bindings.zsh
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
