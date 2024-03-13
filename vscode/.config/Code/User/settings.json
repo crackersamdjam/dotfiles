@@ -13,7 +13,7 @@
     "markdown-preview-enhanced.liveUpdate": true,
     "github.copilot.enable": {
         "*": true,
-        "plaintext": false,
+        "plaintext": true,
         "markdown": false,
         "scminput": false
     },
