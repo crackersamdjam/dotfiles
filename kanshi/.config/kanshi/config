@@ -1,0 +1,32 @@
+# configure as many display profiles as you need
+# refer to "man kanshi" to find out how to configure profiles
+# https://github.com/emersion/kanshi#configuration-file
+# * get your current screen name: swaymsg -t get_outputs
+# * set the resolution and position for your screen: output HDMI1 mode 1920x1080 position 0,0
+# * set the scaling for your screen: output HDMI1 scale 2
+
+#profile {
+#	output eDP-1 position 0,0
+#}
+#profile {
+#	output LVDS-1 disable
+#	output "Some Company ASDF 4242" mode 1600x900 position 0,0
+#}
+
+# instead of DP-3, should put name of monitor
+profile {
+	output DP-3 scale 2
+	output eDP-1 disable
+}
+profile {
+	output DP-7 scale 2
+	output eDP-1 disable
+}
+profile {
+	output DP-8 scale 2
+	output eDP-1 disable
+}
+profile {
+	output eDP-1 scale 1.5
+}
+
