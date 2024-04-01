@@ -15,18 +15,18 @@
 
 # instead of DP-3, should put name of monitor
 profile {
-	output DP-3 scale 2
+	output DP-3 enable scale 2
 	output eDP-1 disable
 }
 profile {
-	output DP-7 scale 2
+	output DP-7 enable scale 2
 	output eDP-1 disable
 }
 profile {
-	output DP-8 scale 2
+	output DP-8 enable scale 2
 	output eDP-1 disable
 }
 profile {
-	output eDP-1 scale 1.5
+	output eDP-1 enable scale 1.5
 }
 

@@ -35,17 +35,20 @@ start() {
 #Accepts managing parameter
 case $1'' in
 'off')
-    pkill wlsunset
+    pkill -x wlsunset
+    waybar-signal sunset
     ;;
 'on')
     start
+    waybar-signal sunset
     ;;
 'toggle')
-    if pkill -0 wlsunset; then
-        pkill wlsunset
+    if pkill -x -0 wlsunset; then
+        pkill -x wlsunset
     else
         start
     fi
+    waybar-signal sunset
     ;;
 'check')
     command -v wlsunset
@@ -54,7 +57,7 @@ case $1'' in
 esac
 
 #Returns a string for Waybar
-if pkill -0 wlsunset; then
+if pkill -x -0 wlsunset; then
     class="on"
     text="location-based gamma correction"
 else
