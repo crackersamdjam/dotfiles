@@ -13,20 +13,15 @@
 #	output "Some Company ASDF 4242" mode 1600x900 position 0,0
 #}
 
-# instead of DP-3, should put name of monitor
-profile {
-	output DP-3 enable scale 2
-	output eDP-1 disable
-}
-profile {
-	output DP-7 enable scale 2
-	output eDP-1 disable
-}
-profile {
-	output DP-8 enable scale 2
-	output eDP-1 disable
-}
 profile {
 	output eDP-1 enable scale 1.5
+}
+profile {
+	output 'Dell Inc. DELL P3223QE HKYTXN3' enable scale 2
+	output eDP-1 disable
+}
+profile {
+	output "Dell Inc. DELL U2720Q J03YW83" enable scale 2
+	output eDP-1 disable
 }
 
