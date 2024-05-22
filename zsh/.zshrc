@@ -16,6 +16,12 @@ fi
 # ---------------
 source ~/.zshenv
 
+function 105(){
+	cd ~/School/WT4/HEALTH105
+}
+function 235(){
+	cd ~/School/WT4/MATH235
+}
 function 341(){
 	cd ~/School/3A/CS341
 }

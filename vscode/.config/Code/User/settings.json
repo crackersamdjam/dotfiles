@@ -28,5 +28,6 @@
     "vim.useSystemClipboard": true,
     "vim.normalModeKeyBindings": [
         {"before": ["g", "r"], "commands": ["references-view.findReferences"]}
-    ]
+    ],
+    "C_Cpp.default.cppStandard": "c++20"
 }
