@@ -54,6 +54,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin()
+Plug 'github/copilot.vim'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 "Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
@@ -268,6 +269,7 @@ endfunction
 
 :map <M-r> :call Run()<Cr>
 :map <M-d> :call Debug()<Cr>
+:map <M-c> :Copilot <Cr>
 
 
 " ===== Key bindings =====
