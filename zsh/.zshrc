@@ -1,9 +1,13 @@
-# Use powerline
+HISTSIZE=10000000
+SAVEHIST=10000000
+
 USE_POWERLINE="true"
+
 # Has weird character width
 # Example:
 #    is not a diamond
 HAS_WIDECHARS="false"
+
 # Source manjaro-zsh-configuration
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
