@@ -16,10 +16,6 @@ set laststatus=2
 set number relativenumber
 set wrap
 
-" column ruler at 100
-" set ruler
-" set colorcolumn=80
-
 " Highlight searching
 set incsearch showmatch hlsearch ignorecase smartcase
 
@@ -43,7 +39,8 @@ highlight link DiagnosticUnnecessary NONE
 
 " run my printcolors cmd to see available colors
 set hlsearch
-hi Search ctermbg=Black
+hi Search ctermbg=grey ctermfg=black
+hi IncSearch ctermbg=grey ctermfg=black
 
 " ===== Plugins =====
 
@@ -55,8 +52,7 @@ endif
 
 call plug#begin()
 Plug 'github/copilot.vim'
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-"Plug 'jiangmiao/auto-pairs'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mbbill/undotree'
@@ -72,7 +68,7 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'vim-scripts/vimcompletesme' " get clangd suggestions instead of default vim text-based suggestions
 Plug 'preservim/nerdtree'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 
@@ -156,7 +152,7 @@ function! Run()
 	let extension = expand('%:e')
 	
 	if index(['cpp', 'cc', 'c++'], extension) >= 0
-		let output = execute('!ulimit -s unlimited -v 2097152 && g++ -DLOCAL -std=c++17 -O2 -march=native -Wfatal-errors -Wall -Wextra -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -Wno-unused-result -Wno-unused-parameter -Wno-misleading-indentation '.@%.' -o '.file_name)
+		let output = execute('!ulimit -s unlimited -v 2097152 && g++ -DLOCAL -std=c++20 -O2 -march=native -Wfatal-errors -Wall -Wextra -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -Wno-unused-result -Wno-unused-parameter -Wno-misleading-indentation '.@%.' -o '.file_name)
 		if v:shell_error != 0
 			echo 'Compilation Failed'
 			"echo '\u001b[31mCompilation Failed\u001b[0m'
@@ -223,7 +219,7 @@ function! Debug()
 	let extension = expand('%:e')
 	
 	if index(['cpp', 'cc', 'c++'], extension) >= 0
-		let output = execute('!ulimit -s unlimited -v 2097152 && g++ -DLOCAL -std=c++17 -O2 -march=native -Wfatal-errors -Wall -Wextra -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -Wno-unused-result -Wno-unused-parameter -Wno-misleading-indentation '.@%.' -o '.file_name)
+		let output = execute('!ulimit -s unlimited -v 2097152 && g++ -DLOCAL -std=c++20 -O2 -march=native -Wfatal-errors -Wall -Wextra -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -Wno-unused-result -Wno-unused-parameter -Wno-misleading-indentation '.@%.' -o '.file_name)
 		if v:shell_error != 0
 			echo 'Compilation Failed'
 			"echo '\u001b[31mCompilation Failed\u001b[0m'
