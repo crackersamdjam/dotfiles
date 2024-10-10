@@ -8,7 +8,6 @@
     },
     "latex-workshop.latex.autoBuild.interval": 200,
     "extensions.ignoreRecommendations": true,
-    "files.autoSave": "afterDelay",
     "terminal.integrated.cursorStyle": "line",
     "markdown-preview-enhanced.liveUpdate": true,
     "github.copilot.enable": {
@@ -30,5 +29,6 @@
         {"before": ["g", "r"], "commands": ["references-view.findReferences"]}
     ],
     "C_Cpp.default.cppStandard": "c++20",
-    "github.copilot.editor.enableAutoCompletions": true
+    "github.copilot.editor.enableAutoCompletions": true,
+    "files.autoSave": "afterDelay"
 }

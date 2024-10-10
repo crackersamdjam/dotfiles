@@ -20,29 +20,14 @@ fi
 # ---------------
 source ~/.zshenv
 
-function 105(){
-	cd ~/School/WT4/HEALTH105
+function 301(){
+	cd ~/School/3B/COM301
 }
-function 235(){
-	cd ~/School/WT4/MATH235
+function 423(){
+	cd ~/School/3B/CS423
 }
-function 341(){
-	cd ~/School/3A/CS341
-}
-function 348(){
-	cd ~/School/3A/CS348
-}
-function 349(){
-	cd ~/School/3A/CS349
-}
-function 350(){
-	cd ~/School/3A/CS350
-}
-function 370(){
-	cd ~/School/3A/CS370
-}
-function 265(){
-	cd ~/School/3A/PHIL265
+function 453(){
+	cd ~/School/3B/CS453
 }
 
 # https://thevaluable.dev/fzf-shell-integration/
