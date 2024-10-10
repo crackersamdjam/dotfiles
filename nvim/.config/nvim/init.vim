@@ -31,8 +31,12 @@ set mouse=a " use mouse for scroll or window size
 " :checkhealth
 set clipboard+=unnamedplus
 
-" https://github.com/Ninjaclasher/scripts-and-config/blob/master/dotfiles/nvim/.config/nvim/init.vim
+" use old vim colors
+set notermguicolors
+colorscheme vim
 set background=light
+
+" https://github.com/Ninjaclasher/scripts-and-config/blob/master/dotfiles/nvim/.config/nvim/init.vim
 hi QuickFixLine guibg=Black
 "https://www.reddit.com/r/neovim/comments/17pkryg/disable_highlighting_of_unused_variables/
 highlight link DiagnosticUnnecessary NONE
@@ -265,7 +269,13 @@ endfunction
 
 :map <M-r> :call Run()<Cr>
 :map <M-d> :call Debug()<Cr>
-:map <M-c> :Copilot <Cr>
+
+" === Copilot ===
+let g:copilot_enabled = 0
+:map <M-c> :Copilot enable <Cr>
+":map <M-c> :Copilot <Cr>
+" more fine grain control: https://github.com/orgs/community/discussions/57887
+
 
 
 " ===== Key bindings =====
@@ -331,4 +341,6 @@ let g:airline_theme='onedark'
 "let g:solarized_termcolors=256
 "set background=dark
 "colorscheme solarized
+
+
 
