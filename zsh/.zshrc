@@ -20,14 +20,12 @@ fi
 # ---------------
 source ~/.zshenv
 
-function 301(){
-	cd ~/School/3B/COM301
+function DDBS(){
+	cd ~/School/Tsinghua/Distributed\ Database\ Systems
 }
-function 423(){
-	cd ~/School/3B/CS423
-}
-function 453(){
-	cd ~/School/3B/CS453
+
+function BigData(){
+	cd ~/School/Tsinghua/Big\ Data
 }
 
 # https://thevaluable.dev/fzf-shell-integration/

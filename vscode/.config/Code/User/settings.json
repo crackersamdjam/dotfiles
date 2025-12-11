@@ -31,5 +31,6 @@
     "C_Cpp.default.cppStandard": "c++20",
     "github.copilot.editor.enableAutoCompletions": true,
     "files.autoSave": "afterDelay",
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "github.copilot.nextEditSuggestions.enabled": true
 }
