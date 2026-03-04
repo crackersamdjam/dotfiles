@@ -1,0 +1,1 @@
+# Change idle settings by copying /etc/sway/idle.yaml to here and making local changes
