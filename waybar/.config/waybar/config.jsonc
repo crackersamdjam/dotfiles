@@ -24,7 +24,7 @@
         "sway/language",
         "custom/github",
         "custom/clipboard",
-        "custom/zeit",
+        // "custom/zeit",
         "cpu",
         "temperature",
         "memory",

@@ -1,6 +1,3 @@
-HISTSIZE=10000000
-SAVEHIST=10000000
-
 USE_POWERLINE="true"
 
 # Has weird character width
@@ -19,13 +16,35 @@ fi
 
 # ---------------
 source ~/.zshenv
+HISTSIZE=1000000000
+SAVEHIST=1000000000
 
-function DDBS(){
-	cd ~/School/Tsinghua/Distributed\ Database\ Systems
+function 4A(){
+	cd ~/School/4A/
 }
 
-function BigData(){
-	cd ~/School/Tsinghua/Big\ Data
+function CO487(){
+	cd ~/School/4A/CO487/
+}
+
+function CS451(){
+	cd ~/School/4A/CS451/
+}
+
+function CS476(){
+	cd ~/School/4A/CS476/
+}
+
+function EASIA302R(){
+	cd ~/School/4A/EASIA302R/
+}
+
+function ECE459(){
+	cd ~/School/4A/ECE459/
+}
+
+function MATH237(){
+	cd ~/School/4A/MATH237/
 }
 
 # https://thevaluable.dev/fzf-shell-integration/

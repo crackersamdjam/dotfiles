@@ -30,7 +30,13 @@
     ],
     "C_Cpp.default.cppStandard": "c++20",
     "github.copilot.editor.enableAutoCompletions": true,
-    "files.autoSave": "afterDelay",
     "editor.wordWrap": "on",
-    "github.copilot.nextEditSuggestions.enabled": true
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "python.analysis.typeCheckingMode": "standard",
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true
+    },
+    "chat.viewSessions.orientation": "stacked",
+    "files.autoSave": "afterDelay"
 }
